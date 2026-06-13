@@ -8,7 +8,7 @@ def load_model():
     model = AutoModelForSequenceClassification.from_pretrained('Jay267/emotion-detection-bert')
     return tokenizer, model
 
-tokenizer, model = load_model('')
+tokenizer, model = load_model()
 
 st.title("Emotional Analysis with Hugging Face Transformers")
 st.write("write a sentence and the model will predict the emotion behind it.")
