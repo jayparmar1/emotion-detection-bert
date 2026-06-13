@@ -3,9 +3,9 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 @st.cache_resource
-def load_model(model_name):
-    tokenizer = AutoTokenizer.from_pretrained('emotion_model')
-    model = AutoModelForSequenceClassification.from_pretrained('emotion_model')
+def load_model():
+    tokenizer = AutoTokenizer.from_pretrained('Jay267/emotion-detection-bert')
+    model = AutoModelForSequenceClassification.from_pretrained('Jay267/emotion-detection-bert')
     return tokenizer, model
 
 tokenizer, model = load_model('emotion_model')
